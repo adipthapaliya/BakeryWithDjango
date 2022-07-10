@@ -24,3 +24,8 @@ footer a{
 .social-media{
     border-bottom: 2px solid rgba(255,255,255,0.5);
   }
+
+  .logo{
+    font-family: 'Pacifico', cursive;
+    font-size: 1.6rem;
+  }
