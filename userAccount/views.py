@@ -10,3 +10,6 @@ def home_page(request):
 
 def contact_page(request):
     return render(request,'user/contact.html')
+
+def about_page(request):
+    return render(request,'user/about.html')

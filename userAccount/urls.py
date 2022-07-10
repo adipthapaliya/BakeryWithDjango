@@ -21,6 +21,8 @@ urlpatterns = [
     path('index',views.home_page),
     path('home',views.home_page),
     path('contact',views.contact_page),
+    path('about',views.about_page),
+
 
 
     

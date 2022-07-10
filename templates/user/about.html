@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+
+
+{% block title %} BakeryHouse || About US {%endblock%}
+
+{%load static%}
+{% block css%} <link rel="stylesheet" href="{% static 'css/user/contact.css'%}"> 
+
+{%endblock%}
+
+
+{% block content %}
+    <main>
+      
+        <!-- Fisrt Container Starts -->
+        <div class="container-fluid first-container">
+          
+          <div class="row">
+            <div class="col-md-6 first-image-section">
+    
+                <img src="{% static 'images/about/chusdeyaba.png'%}" alt="" class="info-image">
+  
+            </div>
+            <div class="col-md-6 fisrt-text-section">
+              <div>
+                <h1> What we are best at?</h1>
+                  <br>
+                  <p class="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, unde sed, est quaerat, cupiditate 
+                       perspiciatis nesciunt explicabo quia repudiandae quo vitae tempora? Nulla tempore, illo nesciunt explicabo vel eum est.</p>
+                       <br>
+                       <p class="two">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, unde sed, est quaerat, cupiditate
+                          perspiciatis nesciunt explicabo quia repudiandae quo vitae tempora? Nulla tempore, illo nesciunt explicabo vel eum est.</p>
+                          <br>
+                          <p class="three">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, unde sed, est quaerat, cupiditate
+                              perspiciatis nesciunt explicabo quia repudiandae quo vitae tempora? Nulla tempore, illo nesciunt explicabo vel eum est.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row adjust-text-section">
+            <div class="col-12">
+              <p class="two-adjust">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, unde sed, est quaerat, cupiditate
+                perspiciatis nesciunt explicabo quia repudiandae quo vitae tempora? Nulla tempore, illo nesciunt explicabo vel eum est.</p>
+                <br>
+                <p class="three-adjust">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, unde sed, est quaerat, cupiditate
+                    perspiciatis nesciunt explicabo quia repudiandae quo vitae tempora? Nulla tempore, illo nesciunt explicabo vel eum est.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Fisrt Container Ends -->
+  
+        <!-- Second Container Starts -->
+          <div class="container-fluid second-container">
+            <div id= "border-content" class="border-content">
+              <p>Order Our Cookies</p>
+              <button type="button" class="btn btn-outline-light">Order Now</button>
+          </div>
+          </div>
+        <!-- Second Container Ends -->
+        <!-- Third Container Starts -->
+          <div class="container-fluid third-container">
+            <div class="row">
+              <div class="col-12 text-center mb-5">
+                <h1>Our Team</h1>
+              </div>
+              <div class="col-md-4 mb-5">
+                <div class="team-image-section mb-4">
+                  <img src="{% static 'images/chef/happy-young-cook-uniform-showing-thumbs-up.png'%}" alt="">
+  
+                </div>
+                <div class="team-text-section text-center">
+                  <h3>Rajesh Shrestha</h3>
+                  <p>Owned by a famous Vermont baker, Denise Levine, our place is proud to be one of San Diego</p>
+  
+                </div>
+              </div>
+              <div class="col-md-4 mb-5">
+                <div class="team-image-section mb-4">
+                  <img src="{% static 'images/chef/happy-young-cook-uniform-showing-thumbs-up.png'%}" alt="">
+  
+                </div>
+                <div class="team-text-section text-center">
+                  <h3>Rajesh Shrestha</h3>
+                  <p>Owned by a famous Vermont baker, Denise Levine, our place is proud to be one of San Diego</p>
+  
+                </div>
+              </div>
+              <div class="col-md-4 mb-5">
+                <div class="team-image-section mb-4">
+                  <img src="{% static 'images/chef/happy-young-cook-uniform-showing-thumbs-up.png'%}" alt="">
+  
+                </div>
+                <div class="team-text-section text-center">
+                  <h3>Rajesh Shrestha</h3>
+                  <p>Owned by a famous Vermont baker, Denise Levine, our place is proud to be one of San Diego</p>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- Third Container Ends -->
+  
+        <!-- Fourth Container Starts -->
+          <div class="container-fluid fourth-container">
+            
+          </div>
+        <!-- Fourth Container Ends -->
+  
+        <!-- Fifth Container Starts -->
+          <div class="container-fluid fifth-container">
+            <div class="container-xl container-fluid">
+              <div class="row">
+                <div class=" col-lg-7 offset-xl-0 offset-lg-1 col-sm-8 col-12 align-self-start fifth-image-section">
+                  <img src="{% static 'images/about/decorating-delicious-homemade-eclairs-with-chocolate-peanuts.jpg'%}" alt="" >
+  
+                </div>
+                <div class=" col-lg-5 col-sm-7 col-12 align-self-end fifth-text-section">
+                  <div class="text-box">
+                    <h1 >Professional Recipie</h1>
+                   
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  Doloremque amet nostrum dolor vero omnis ullam,  quos sit illo id,  impedit soluta molestias explicabo,  quae quis dolores eos. Hic,  voluptates architecto?</p>
+                   
+                    <a href="" class="cta nav-cta"><button class="btn-login">See More Recipie</button></a>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- Fifth Container Ends -->
+      </main>
+  
+      {%endblock%}
