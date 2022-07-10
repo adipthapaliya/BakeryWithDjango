@@ -1,0 +1,181 @@
+/* Header */
+header{
+    width: 100%;
+    height: 55vh;
+    background-image: url(../../images/background/assortment-pieces-cake.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: -350px;
+    
+  }
+  
+  nav{
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+  }
+
+/* Top contact part */
+.top-navigation{
+    padding: 0.5rem 0;
+    margin: 0 0 !important;
+    background-color: rgba(213, 202, 202, 0.419);
+
+    
+}
+.top-navigation p{
+    margin: 0 0 !important;
+}
+/* Top part Ends */
+
+/* Logo */
+.navbar-brand{
+    font-size: 2.1rem;
+    padding: 0 30px;
+    font-family: 'Pacifico', cursive;
+
+}
+
+/* Navlist */
+.navbar-collapse{
+    padding: 0 40px;
+}
+
+.navbar-collapse :not(.navbar-brand){
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.2rem;
+
+}
+
+.nav-item:not(.right-section>li){
+    padding: 0 20px;
+}
+
+.nav-item > a{
+    color: black;
+    padding: 4px 0 !important;
+}
+.nav-item > a:hover{
+    color: black;
+}
+.nav-link:not(.right-section>li>a){
+    position: relative;
+}
+  
+.nav-link:not(.right-section>li>a)::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    position:absolute;
+    left: 0;
+    bottom: 1px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s ease;
+}
+  
+.nav-link:not(.right-section>li>a):hover::after{
+    transform: scaleX(1);
+}
+/* Nav-list Ends */
+
+
+/* Login button on nav */
+.btn-login {
+    padding: 10px 15px;
+    border: unset;
+    border-radius: 15px;
+    color: black;
+    z-index: 1;
+    background: white;
+    position: relative;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+    font-size: 0.9rem !important;
+}
+   
+.btn-login::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: black;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+}
+   
+.btn-login:hover {
+    color: white;
+    
+}
+   
+.btn-login:hover::before {
+    width: 100%;
+}
+
+/* =================================================== */
+/*Apply styles after scroll*/
+.scrolling-active{
+    background-color: #fff;
+    box-shadow: 0 3px 1rem rgba(0,0,0,.1);
+    position: fixed;
+    top: 0%;
+    margin-top: 0%;
+    padding-bottom: 8px;
+    z-index: 9999;  
+    width: 100%;
+  }
+  
+  
+  
+  .scrolling-active .btn-login{
+    background-color: black;
+    color: white;
+  }
+  
+  .scrolling-active .btn-login::before{
+    background-color: white;
+  }
+  .scrolling-active .btn-login:hover{
+    color: black;
+  }
+  
+ 
+  
+/*Apply styles after scroll end*/
+
+
+
+/* Curver */
+
+header{
+    position: relative;
+  }
+  .custom-shape-divider-bottom-1656740841 {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+overflow: hidden;
+line-height: 0;
+transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1656740841 svg {
+position: relative;
+display: block;
+width: calc(178% + 1.3px);
+height: 500px;
+}
+
+.custom-shape-divider-bottom-1656740841 .shape-fill {
+fill: #FFFFFF;
+}
