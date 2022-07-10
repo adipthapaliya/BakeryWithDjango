@@ -14,10 +14,9 @@
     {%load static %}
 <link rel="stylesheet" href="{% static 'css/common/navigation.css'%}">
   <link rel="stylesheet" href="../static/css/index.css">
-  <link rel="stylesheet" href="../static/css/common/button.css">
   <link rel="stylesheet" href="../static/css/common/footer.css">
 
-  {%blockcss%}
+  {%block css%}
 
   {%endblock%}
 
@@ -50,11 +49,12 @@
     {% include 'footer.html'%}
 
 
+    {% block js%}
+
+    {% endblock %}
+    
+    <script src="{% static 'js/common/navigation.js'%}"></script>
+
 </body>
 
-{% block js%}
-
-{% endblock %}
-
-<script src="{% load 'js/common/navigation.js'%}"></script>
 </html>

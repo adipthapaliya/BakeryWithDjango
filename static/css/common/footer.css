@@ -1,0 +1,26 @@
+footer{
+    background-image: url(../../images/background/assortment-pieces-cake.jpg);
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+  }
+
+footer>div{
+    background-color: rgba(213, 202, 202, 0.4);
+    width: 100%;
+    height: 100%;
+    
+
+}
+
+footer a{
+    text-decoration: none;
+}
+
+.social-media{
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+  }

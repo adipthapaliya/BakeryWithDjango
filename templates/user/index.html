@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+
+{% block title %}  {%endblock%}
+
+{%load static%}
+{% block css%} <link rel="stylesheet" href="{% static 'css/user/index.css'%}"> 
+<link rel="stylesheet" href="{% static  'css/common/button.css'%}">
+
+{%endblock%}
+
+
+{% block content %}
+
+<main>
+    <!-- Fisrt Container -->
+    <div class="container-fluid first-container">
+      <div class="row ">
+        <div class="col-md-5 col-sm-8 offset-sm-2 col-10 offset-md-0 offset-1 image-container">
+          <img src="{% static 'images/index/creamy.png'%}" alt="">
+        </div>
+        <div class="col-md-7 col-sm-8 offset-sm-2 col-10 offset-md-0 offset-1  text-container d-flex align-items-center">
+          <div>
+            <h3 > Bakery House</h3>
+              <p>We try to recarete new menu  with our professional baker and  try to give you new test  of our organixation. We try to recarete new menu  with our professional baker and  try to give you new test  of our organixation</p>
+              <a href="">
+                  <button class="btn-cta ">
+                      <span class="circle" aria-hidden="true">
+                      <span class="icon arrow"></span>
+                      </span>
+                      <span class="button-text">Order Now</span>
+                    </button>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fisrt Container Ends -->
+    <!-- Second Container -->
+
+    <div class="container-fluid second-container" id="second-container">
+
+    </div>
+    <!-- Second COntainer Ends -->
+
+    <!-- Third Container -->
+    <div class="container-fluid third-container" id ="third-container">
+      <div class="col-md-7 col-sm-8 offset-sm-2 col-10 offset-md-0 offset-1 text-container d-flex align-items-center">
+        <div>
+          <h3 > Bakery House</h3>
+            <p>We try to recarete new menu  with our professional baker and  try to give you new test  of our organixation. We try to recarete new menu  with our professional baker and  try to give you new test  of our organixation</p>
+            <a href="">
+                <button class="btn-cta ">
+                    <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text">Order Now</span>
+                  </button>
+            </a>
+        </div>
+      </div>
+    </div>
+    <!-- Third Container Ends -->
+
+     <!-- Fourth Container -->
+     <div class="container-fluid fourth-container">
+      <div class="row ">
+        <div class="col-md-5 col-sm-8 offset-sm-2 col-10 offset-md-0 offset-1  image-container">
+          <img src="{% static 'images/index/cup.png'%}" alt="">
+        </div>
+        <div class="col-md-7 col-sm-8 offset-sm-2 col-10 offset-md-0 offset-1 text-container d-flex align-items-center">
+          <div>
+            <h3 > Bakery House</h3>
+              <p>We try to recarete new menu  with our professional baker and  try to give you new test  of our organixation. We try to recarete new menu  with our professional baker and  try to give you new test  of our organixation</p>
+              <a href="">
+                  <button class="btn-cta ">
+                      <span class="circle" aria-hidden="true">
+                      <span class="icon arrow"></span>
+                      </span>
+                      <span class="button-text">Order Now</span>
+                    </button>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fourth Container Ends -->
+  </main>
+{%endblock%}
+
+{% block js%}
+<script src="{% load 'js/index.js'%}"></script>
+
+{%endblock%}

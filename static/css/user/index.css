@@ -1,0 +1,93 @@
+.image-container{
+    padding: 0 !important;
+}
+.image-container img{
+    width: 100%;
+    height: 100%;
+}
+
+.text-container div{
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.text-container > div p{
+    margin: 20px 0;
+}
+
+/* Second Container */
+#second-container{
+    background-image: url(../../images/index/dounot.png);
+    height: 70vh;
+    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+/* Second Container Ends */
+
+/* Third Container Starts */
+#third-container{
+    background-image: url(../../images/index/side.jpg);
+    height: 60vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+/* Third Container Ends */
+
+/* Responsive */
+
+@media only screen and (max-width: 1500px) {
+
+
+  
+
+
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+
+
+
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+
+   
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+
+ 
+
+    .text-container div{
+        width: 100%;
+    }
+ 
+
+}
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+
+  
+ 
+  
+}
