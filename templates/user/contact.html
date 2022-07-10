@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+
+{% block title %} BakeryHouse || Home {%endblock%}
+
+{%load static%}
+{% block css%} <link rel="stylesheet" href="{% static 'css/user/contact.css'%}"> 
+
+{%endblock%}
+
+
+{% block content %}
+<main>
+
+    <div class="container-fluid first-container">
+        <div class="row ">
+            <div class="col-lg-3 col-6 offset-3 offset-lg-0 address-section">
+
+                <div class="text-center">
+                    
+                    <div class="sub-one">
+                        <p style="font-weight: bold; font-size: 1.2rem;" class="m-0"> ADDRESS : </p>
+                        <p>Macchapokhari ko vitra ko galli</p>
+                    </div>
+    
+                    <div class="sub-two">
+                        <p style="font-weight: bold; font-size: 1.2rem;" class="m-0">PHONES : </p>
+                        <p class="m-0">+977 9863208029</p>
+                        <p>+977 01-4362781</p>
+                    </div>
+    
+                    <div class="sub-three">
+                        <p style="font-weight: bold; font-size: 1.2rem;" class="m-0">Emails :</p>
+                        <p> adipthapaliya123@gmail.com </p>
+                    </div>
+                
+                    
+    
+                </div>
+
+            </div>
+            <div class="col-lg-8 col-10 offset-1 offset-lg-0">
+                    <div class="row mb-5">
+                        <div class="col-12">
+                            <p style="font-weight: bold; font-size: 1.3rem;" class="m-0">MISCELLANEOUS INFORMATION :</p>
+                            <p>Email us with any questions or inqueries or use our contact data</p>
+                        </div>
+                        
+                    </div>
+                    <form action="" method="post">
+                        
+                        <div class="row mb-4">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="First name">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Last name">
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Address">
+                            </div>
+                            <div class="col">
+                                <input type="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Phone Number">
+                            </div>
+                        </div>
+
+                        <div class="row mb-5">
+                            <div class="col">
+                                <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="8" placeholder="Message"></textarea>                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col">
+                                <input type="button" class="btn btn-primary mb-3" value="Submit">
+                            </div>
+                            <div class="col">
+                                <input type="button" class="btn btn-danger" value="Clear">
+
+                            </div>
+                        </div>
+                        
+                    </form>
+        
+            </div>
+        </div>
+    </div>
+
+    <!-- Seocnd Container -->
+        <div class="container-fluid second-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.3608383752103!2d85.32779051541544!3d27.7061431321509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190a74aa1f23%3A0x74ebef82ad0e5c15!2sSoftwarica%20College%20of%20IT%20%26%20E-Commerce!5e0!3m2!1sen!2snp!4v1650162293658!5m2!1sen!2snp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+
+        </div>
+    <!-- Second Container Ends -->
+</main>
+{%endblock%}
