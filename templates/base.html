@@ -47,10 +47,14 @@
 
     {% endblock %}
 
+    {% include 'footer.html'%}
+
 
 </body>
 
 {% block js%}
 
 {% endblock %}
+
+<script src="{% load 'js/common/navigation.js'%}"></script>
 </html>
