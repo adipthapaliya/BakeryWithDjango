@@ -5,5 +5,8 @@ from django.shortcuts import render
 
 # Home Page Render
 
-def home(request):
+def home_page(request):
     return render(request,'user/index.html')
+
+def contact_page(request):
+    return render(request,'user/contact.html')
