@@ -1,0 +1,240 @@
+.first-container{
+    margin: 10vh 0;
+}
+
+.first-image-section img{
+    width: 100%;
+    padding: 0 !important;
+}
+
+.adjust-text-section{
+    display: none;
+}
+
+.fisrt-text-section{
+    display: flex;
+    align-items: center;
+}
+
+.fisrt-text-section>div{
+    width: 80%;
+}
+
+.adjust-text-section>div{
+width: 85%;
+margin: 0 auto;
+}
+
+
+/* Second Container */
+
+.second-container{
+    background-image: url(../../images/about/close-up-chocolate-cookies.jpg);
+    min-height: 50vh;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  
+   
+  
+  }
+
+
+  
+  .border-content{
+    border-style: solid;
+    border-color: rgba(255,255,255,0.5);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 80%;
+    border-width: 2px;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .border-content p{
+    color: white;
+  }
+/* Seond Container Ends */
+
+
+/* Third Container */
+
+.third-container{
+    margin: 10vh 0;
+}
+
+.team-image-section,
+.team-text-section{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.team-image-section>img{
+    width: 100%;
+}
+
+/* Third Container Ends */
+
+/* Forth Container */
+.fourth-container{
+    background-image: url(../../images/about/front-view-sweet-chocolate-cake-with-copy-space.jpg);
+    height: 60vh;
+    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+/* Fourth Container Ends */
+
+/* Fifth Container Starts */
+.fifth-container{
+    background: linear-gradient(to bottom, white 0%, white 50%, #97ac9b 50%, #97ac9b 100% );
+    padding: 25vh 0;
+    
+}
+
+.fifth-image-section>img{
+    width: 120%;
+}
+
+.fifth-text-section{
+    padding-top: 20vh;
+    margin-bottom: -10%;
+    margin-left: -10%;
+}
+
+.text-box{
+    
+    background-color: white;
+    padding: 50px 20px;
+}
+/* Fifth Container Ends */
+
+/* Responsive */
+
+@media only screen and (max-width: 1500px) {
+
+
+  
+
+
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+
+    .fisrt-text-section>div{
+        width: 85%;
+    }
+    .first-image-section{
+        padding-bottom: 30px;
+    }
+
+    .team-image-section{
+        width: 85%;
+    }
+
+
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+
+    .three,.two{
+        display: none;
+    }
+
+    .adjust-text-section{
+        display: block;
+    }
+
+    .team-image-section{
+        width: 95%;
+    }
+
+    .fifth-container{
+        padding-bottom: 35vh;
+    }
+
+    .fifth-image-section>img{
+        padding-left: 20px;
+    }
+    
+    .fifth-text-section{
+        padding-top: 20vh;
+        margin-bottom: -30%;
+        margin-left: -30%;
+    }
+    
+    
+    
+
+    
+   
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+
+    .three,.two{
+        display: block;
+    }
+
+    .adjust-text-section{
+        display: none;
+    }
+
+    .fisrt-text-section>div{
+        margin: 0 auto;
+    }
+
+    .team-image-section{
+        width: 80%;
+    }
+
+    
+
+}
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 576px) {
+
+    .fifth-container{
+        padding: 10vh 0;
+    }
+
+    .fifth-image-section>img{
+        width: 100%;
+        padding: 0;
+    }
+    
+    .fifth-text-section{
+        padding-top: 0;
+        margin-bottom: 0%;
+        margin-left: 0%;
+    }
+
+    .text-box{
+    
+        background-color: white;
+        padding: 20px 20px;
+    }
+  
+ 
+  
+}
+
