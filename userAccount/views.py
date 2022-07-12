@@ -20,6 +20,9 @@ def contact_page(request):
 def about_page(request):
     return render(request,'user/about.html')
 
+def gallary_page(request):
+    return render(request,'user/galary.html')
+
 def login_page(request):
     return render(request,'login_register/user_login.html')
 

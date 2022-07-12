@@ -1,0 +1,70 @@
+/* Fisrt Container Starts */
+
+.first-container{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    background: linear-gradient(to right, white 0%, white 15%, #97ac9b41 15%, #97ac9b41 55%,white 55%, white 100% );
+    margin-bottom: 10vh;
+
+}
+
+.first-image>div img{
+    width: 100%;
+}
+
+.first-image{
+    padding: 0 150px;
+}
+
+.first-text{
+    margin-top: 10vh;
+}
+
+.first-text>div h1{
+    color: #67756a;
+}
+/* First Container Ends */
+
+/* Second Container Starts */
+.second-container{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    background: linear-gradient(to right, white 0%, white 15%, #97ac9b41 15%, #97ac9b41 85%,white 85%, white 100% );
+    margin-bottom: 10vh;
+
+}
+
+.second-image{
+    padding-left: 8%;
+}
+.images>div {
+    margin-bottom: 4vh;
+}
+.images>div img{
+    width: 100%;
+}
+
+.second-text{
+    padding-top: 8%;
+    padding-right: 7%;
+}
+
+.text{
+    padding-left: 2vw;
+}
+.text p{
+    font-size: 1.2rem;
+    
+}
+
+.text-design{
+    margin-top: 20%;
+    padding: 50px 20px;
+    margin-left: -14%;
+}
+
+.text-design h1{
+    color: #67756a;
+
+}
+/* second Container Ends */

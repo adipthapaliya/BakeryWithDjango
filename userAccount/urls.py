@@ -22,6 +22,8 @@ urlpatterns = [
     path('home',views.home_page),
     path('contact',views.contact_page),
     path('about',views.about_page),
+    path('gallary',views.gallary_page),
+
     path('login',views.login_page),
     path('register',views.register_page),
     path('register/user',views.register_user),

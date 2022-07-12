@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+
+{% block title %} BakeryHouse || Gallary {%endblock%}
+
+{%load static%}
+{% block css%} <link rel="stylesheet" href="{% static 'css/user/galary.css'%}"> 
+
+{%endblock%}
+
+
+{% block content %}
+ 
+<main>
+    <!-- Fisrt Container Starts -->
+    <div class="first-container container-fluid">
+        <div class="row first-image">
+            <div class="col-4">
+                <img src="{%static 'images/galary/front-view-female-cook-rolling-out-dough-with-flour-dark-job-raw-dough-bakery-pie-oven-pastry-hotcake.jpg'%}" alt="">
+            </div>
+            <div class="col-4">
+                <img src="{% static  'images/galary/decorating-delicious-homemade-eclairs-with-chocolate-peanuts.jpg'%}" alt="">
+            </div>
+            <div class="col-4">
+                <img src="{% static 'images/galary/chef-cutting-bread-loaf-chopping-board.jpg'%}" alt="">
+            </div>
+        </div>
+        <div class="row first-text">
+            <div class="col-4 offset-1">
+                <h1><b>How We Work <br> In Kitchen </b></h1>
+            </div>
+            <div class="col-4 offset-1">
+                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores distinctio sed nobis atque placeat natus sit, mollitia consectetur eaque totam. Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fisrt Container ends -->
+
+    <!-- Second Container Starts -->
+    <div class="second-container container-fluid">
+        <div class="row ">
+            <div class="col-6 second-image">
+                <div class="row images">
+                    <div class="col-6">
+                        <img src="{%static 'images/galary/delicious-cake-with-fruits-cream.jpg'%}" alt="">
+                    </div>
+                    <div class="col-6">
+                        <img src="{% static 'images/galary/white-cake-poured-with-chocolate-decorated-with-different-cookies.jpg'%}" alt="">
+                    </div>
+                    <div class="col-6">
+                        <img src="{%static 'images/galary/delicious-cake-with-fruits-cream.jpg'%}" alt="">
+                    </div>
+                    <div class="col-6">
+                        <img src="{% static 'images/galary/white-cake-poured-with-chocolate-decorated-with-different-cookies.jpg'%}" alt="">
+                    </div><div class="col-6">
+                        <img src="{%static 'images/galary/delicious-cake-with-fruits-cream.jpg'%}" alt="">
+                    </div>
+                    <div class="col-6">
+                        <img src="{% static 'images/galary/white-cake-poured-with-chocolate-decorated-with-different-cookies.jpg'%}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 second-text">
+                <div class="row ">
+                    <div class="col-12 text">
+                        <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam eum mollitia saepe vero soluta nihil eius cumque dolor eaque at fugiat non, ratione necessitatibus atque, sapiente numquam provident nostrum. Explicabo.</p>
+                        <button type="button" class="btn btn-outline-dark">ABOUT US</button>
+                    </div>
+                    <div class="col-12 text-design  bg-white">
+                        <h1><b>Our SPECIAL ITEMS <br> OF THE MENU</b></h1>
+                    </div>
+                    <div class="col-12"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Second Container Ends -->
+
+</main>
+
+
+{%endblock%}
