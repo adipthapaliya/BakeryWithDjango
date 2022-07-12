@@ -11,6 +11,12 @@ from django.contrib import messages
 def home_page(request):
     return render(request,'admin/index.html')
 
+@login_required(login_url='/admin/login')
+
+def menu_page(request):
+    return render(request,'admin/menu.html')
+
+
 
 def login_page(request):
     return render(request,'login_register/admin_login.html')
@@ -42,3 +48,7 @@ def login_admin(request):
 
         return redirect('admin/login')
 
+
+def log_out(request):
+    logout(request)
+    return redirect('/admin/login')

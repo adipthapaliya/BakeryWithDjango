@@ -47,36 +47,36 @@
                         </div>
                         
                     </div>
-                    <form action="" method="post">
+                    <form action="/products/user/sendmessage" method="post">
                         
                         <div class="row mb-4">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="First name">
+                                <input type="text" class="form-control" placeholder="First name" required name="firstname">
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Last name">
+                                <input type="text" class="form-control" placeholder="Last name " required name="lastname">
                             </div>
                         </div>
                         <div class="row mb-4">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Address">
+                                <input type="text" class="form-control" placeholder="Address" required name="address">
                             </div>
                             <div class="col">
-                                <input type="email" class="form-control" placeholder="Email">
+                                <input type="email" class="form-control" placeholder="Email" required name="email">
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Phone Number">
+                                <input type="text" class="form-control" placeholder="Phone Number" required name="phonenumber">
                             </div>
                         </div>
 
                         <div class="row mb-5">
                             <div class="col">
-                                <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="8" placeholder="Message"></textarea>                                </div>
+                                <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="8" placeholder="Message" required name="message"></textarea>                                </div>
                             </div>
                         </div>
                         <div class="row mb-4">
                             <div class="col">
-                                <input type="button" class="btn btn-primary mb-3" value="Submit">
+                                <input type="submit" class="btn btn-primary mb-3" value="Submit">
                             </div>
                             <div class="col">
                                 <input type="button" class="btn btn-danger" value="Clear">

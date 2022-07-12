@@ -1,0 +1,165 @@
+.first-container{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+
+.image img{
+    width: 100%;
+}
+
+.text p{
+    padding: 10px 0;
+}
+
+.menu-item>div{
+    padding: 0;
+}
+
+.menu-item>div>div{
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 250ms ease-in-out;
+}
+
+.active-menu{
+    transform: scale(1.2);
+
+}
+
+.active-menu:not(.menu-item>div:first-child){
+    margin: 0 25px;
+    
+}
+
+.menu-item>div>div:not(.active-menu>div){
+    background-color: #ddd;
+}
+
+.menu-item>div>div:hover:not(.active-menu>div){
+    background-color: white;
+    transform: scale(1.2);
+
+}
+
+
+/* Second Container */
+
+.second-container{
+    padding-top: 10vh;
+    padding-bottom: 10vh;}
+.special-item>div{
+    width: 95%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 0 auto;
+}
+
+
+.special-image img{
+    width: 100%;
+}
+
+.special-text{
+    padding: 10px 20px;
+}
+/* Second COntainer Ends */
+
+/* Third COntainer Starts */
+
+    .third-container{
+        padding-top: 10vh;
+        padding-bottom: 10vh;    }
+
+    .item{
+        margin-bottom: 4vh;
+    }
+    .item>div{
+        width: 95%;
+    }
+    .item-image img{
+        width: 100%;
+    }
+
+    
+
+    .display-none{
+        display: none;
+    }
+
+
+
+    /* End */
+
+/* Third Container Ends */
+
+/* Responsive */
+
+@media only screen and (max-width: 1500px) {
+
+
+  
+
+
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+
+  
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+
+    /* Second Container */
+    
+    .second-container{
+        padding: 10vh 30px;
+    }
+
+    .special-item>div{
+        width: 100%;
+    }
+    .special-item{
+        margin-bottom: 5vh;
+    }
+
+    .special-text section{
+        flex-direction: column;
+    }
+
+    .active-menu:not(.menu-item>div:first-child){
+        margin-left: initial;
+        margin-right: 0;
+        
+    }
+
+
+/* Second COntainer Ends */
+    
+   
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+
+    
+
+    
+
+}
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 576px) {
+
+   
+ 
+  
+}
+
