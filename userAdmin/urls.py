@@ -22,6 +22,9 @@ urlpatterns = [
     path('home',views.home_page),
     path('menu',views.menu_page),
 
+    path('message',views.message_page),
+
+
     path('login',views.login_page),
     path('loginAdmin',views.login_admin),
     path('logout',views.log_out),

@@ -5,6 +5,8 @@ from django.contrib.auth import authenticate,login as log
 from django.contrib.auth import logout
 from django.contrib import messages
 
+from products.models import MessageModel
+
 # Create your views here.
 @login_required(login_url='/admin/login')
 
@@ -15,6 +17,12 @@ def home_page(request):
 
 def menu_page(request):
     return render(request,'admin/menu.html')
+
+
+@login_required(login_url='/admin/login')
+def message_page(request):
+    message = MessageModel.objects.all()
+    return render(request,'admin/message.html',{'message':message})
 
 
 

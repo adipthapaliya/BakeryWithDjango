@@ -1,0 +1,63 @@
+{% extends 'adminbase.html'%}
+
+{% block message %} active  {% endblock %}
+
+
+{% block title %} Admin || Message   {% endblock %}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{%static 'css/admin/message.css'%}">
+
+    <style>
+        .main-container{
+            min-height: 50vh;
+            margin: 10vh auto;
+        }
+    </style>
+{% endblock %}
+
+
+{% block content %}
+
+<main >
+
+    <div class="container text-white main-container">
+        <h2>Message Table</h2>
+        <table class="table table-hover ">
+            <thead>
+              <tr>
+                <th scope="col"> SN </th>
+                <th scope="col">Full Name</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Address</th>
+
+                <th scope="col">Message</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for messages in message|dictsortreversed:"id" %}
+              <tr>
+                <th scope="row">1</th>
+                <td >{{messages.firstname}} &nbsp; {{messages.lastname}}</td>
+                <td>{{messages.email}}</td>
+                <td>{{messages.phonenumber}}</td>
+                <td>{{messages.address}}</td>
+
+                <td>{{messages.message}}</td>
+              </tr>
+
+              {% endfor %}
+              
+            </tbody>
+          </table>
+
+
+
+    </div>
+
+</main>
+    
+{% endblock %}
