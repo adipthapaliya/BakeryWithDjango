@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+
+    <title>Login</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{%static 'css/login_register/user_login.css'%}">
+    <link rel="stylesheet" href="../CSS/buttonStyle.css">
+    <link rel="stylesheet" href="../CSS/inputbox.css">
+</head>
+<body>
+   
+
+    <main>
+
+        <div  class="container-fluid ">
+            {% if messages %}
+                {% for message in messages %}
+                
+                <div class="alert alert-success d-flex align-items-center" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                    <div>
+                      {{message}}
+                    </div>
+                  </div>
+
+              {% endfor %}
+
+              {% endif %}
+
+
+            <div class="row w-100 login-table ">
+
+                <div class="col-lg-5 offset-lg-1 d-flex justify-content-center">
+                    <form action="/login/user" method="post">
+                        {%csrf_token%}
+
+                        <h2 class="mb-5">User Login </h2>
+
+
+                        <div class="group">      
+                            <input type="text" required name="username">
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Username</label>
+                        </div>
+
+                        <div class="group">      
+                            <input type="password" required name="password">
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Password</label>
+                          </div>
+                        <div class="mb-3">
+                            <button type="submit" class="cta cta-menu cta-menu-login">
+                                <span>Get Started</span>
+                                <svg viewBox="0 0 13 10" height="10px" width="15px">
+                                <path d="M1,5 L11,5"></path>
+                                <polyline points="8 1 12 5 8 9"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="row ">
+
+                            <div class="col-12 d-flex justify-content-between mb-3">
+                                <a href="/register" class="login-but">CREATE ACCOUNT</a>
+                                <a href="" class="forget-password">Forget Password?</a>
+                            </div>
+
+                            <div class="col-12">
+                                <a href="" class="login-but">NEED HELP?</a> 
+
+                            </div>
+                            
+
+                        </div>
+
+                        
+                    </form>
+                   
+                </div>
+
+            </div>
+
+        <div class="row w-100">
+            <div class="col-lg-6 mb-3">
+                <a href="/about">About Us</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Terms Of Use</a>
+                    
+                
+            </div>
+
+            <div class="col-lg-6 d-flex justify-content-end">© 220 Key. All Rights Reserved | Design By Adip</div>
+
+        </div>
+            
+        </div>
+
+      
+
+        
+    </main>
+
+    
+    
+</body>
+</html>

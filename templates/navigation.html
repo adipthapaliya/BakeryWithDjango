@@ -1,3 +1,5 @@
+{% load static %}
+
 <header>
 
     
@@ -35,11 +37,33 @@
              
             </ul>
             <ul class="navbar-nav  mb-2 mb-lg-0 right-section">
-               
-               <li class="nav-item">
-                <a class="nav-link cta nav-cta"> <button class="btn-login"> Sign In </button> </a>
+
+              {% if request.user.is_authenticated %}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="{% static 'images/login_register/—Pngtree—user cartoon avatar pattern flat_4492883.png'%}" alt="" style="height: 50px; width: auto;">
+                  {{user.first_name}}
+                </a>
+                <ul class="dropdown-menu " aria-labelledby="navbarDarkDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>Calander</a></li>
+                  <li><a class="dropdown-item" href="#"> <i class="fa fa-sliders fa-fw" aria-hidden="true"></i>  Setting</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a></li>
+                </ul>
+              </li>
+
+              {%else%}
+              <li class="nav-item">
+                <a class="nav-link cta nav-cta" href="/login"> <button class="btn-login"> Sign In </button> </a>
 
                </li>
+
+
+              {%endif%}
+
+               
+              
               </ul>
               
           </div>
