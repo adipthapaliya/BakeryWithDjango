@@ -6,6 +6,8 @@ from django.contrib.auth.decorators import login_required
 
 from django.contrib import messages
 
+from products.models import ProductModel
+
 # Create your views here.
 
 
@@ -86,3 +88,14 @@ def register_user(request):
 def log_out(request):
     logout(request)
     return redirect('/home')
+
+
+def menu_page(request):
+    cake = ProductModel.objects.all().filter(product_category='cake')
+    cookies = ProductModel.objects.all().filter(product_category="cookies")
+    cupcake = ProductModel.objects.all().filter(product_category="cupcake")
+    desert = ProductModel.objects.all().filter(product_category="desert")
+    dounot = ProductModel.objects.all().filter(product_category="dounot")
+
+    special = ProductModel.objects.all().filter(special=1) 
+    return render(request,'user/menu.html',{'special':special,'cake':cake,'cookies':cookies,'cupcake':cupcake,'desert':desert,'dounot':dounot})

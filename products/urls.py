@@ -20,6 +20,10 @@ urlpatterns = [
     path('admin/addproduct',views.add_product),
     path('admin/delete/<int:id>',views.delete_product),
     path('user/sendmessage',views.add_message),
+    path('admin/edit/<int:id>',views.edit),
+    path('admin/delete/<int:id>',views.delete),
+    path('admin/special/<int:id>',views.special),
+
 
     
 

@@ -1,3 +1,4 @@
+from itertools import product
 from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -5,7 +6,7 @@ from django.contrib.auth import authenticate,login as log
 from django.contrib.auth import logout
 from django.contrib import messages
 
-from products.models import MessageModel
+from products.models import MessageModel, ProductModel
 
 # Create your views here.
 @login_required(login_url='/admin/login')
@@ -16,7 +17,14 @@ def home_page(request):
 @login_required(login_url='/admin/login')
 
 def menu_page(request):
-    return render(request,'admin/menu.html')
+    cake = ProductModel.objects.all().filter(product_category='cake')
+    cookies = ProductModel.objects.all().filter(product_category="cookies")
+    cupcake = ProductModel.objects.all().filter(product_category="cupcake")
+    desert = ProductModel.objects.all().filter(product_category="desert")
+    dounot = ProductModel.objects.all().filter(product_category="dounot")
+
+    special = ProductModel.objects.all().filter(special=1) 
+    return render(request,'admin/menu.html',{'special':special,'cake':cake,'cookies':cookies,'cupcake':cupcake,'desert':desert,'dounot':dounot})
 
 
 @login_required(login_url='/admin/login')

@@ -1,0 +1,364 @@
+{% extends 'base.html' %}
+
+
+{% block title %} BakeryHouse || Home {%endblock%}
+
+{%load static%}
+{% block css%} <link rel="stylesheet" href="{% static 'css/common/menu.css'%}"> 
+
+{%endblock%}
+
+
+
+
+
+{% block content %}
+
+<style>
+    figure {
+        width: 90%;
+        margin: 0 auto !important;
+    }
+    img {
+        width: 100%;
+    }
+</style>
+
+
+
+
+<main>
+
+
+    </div>
+
+    <!-- Second Container -->
+    <div class="container-lg second-container">
+       <div class="row">
+           <div class="col-12 text-center mb-5">
+               <h2>Todays Special</h2>
+               <hr class="w-25 " style="margin: 0 auto;">
+               <p>The role of good cook waves in presentation</p>
+           </div>
+       </div>
+       <div class="col-12">
+           <div class="row">
+
+                {% for specials in special %}
+               <div class="col-md-4 col-sm-8 offset-md-0 offset-sm-2 col-10 offset-1 special-item">
+                   <div>
+                       <div class="special-image">
+                           <img src="/{{specials.product_image}}" alt="">
+                       </div>
+                       <div class="special-text">
+                           <section class="d-flex justify-content-between">
+                               <p><b>{{specials.product_name}}</b></p>
+                               <p><b>Rs {{specials.product_price}}</b></p>
+                           </section>
+                           <p>{{specials.product_details}}</p>                                
+
+                       </div>
+                   </div>
+               </div>
+               {% endfor %}
+               
+           </div>
+       </div>
+   </div>
+<!-- Second Container Ends -->
+
+
+   <!-- Fisrt Container Starts -->
+   <div class="container-fluid first-container">
+       <div class="row">
+           <div class="col-12 text-center mb-5">
+               <h2>Main Menu</h2>
+               <hr class="w-25 " style="margin: 0 auto;">
+               <p>The role of good cook waves in presentation</p>
+           </div>
+           <div class="col-12">
+               <div class="row menu-item">
+                   <!-- Item List -->
+                   <div class="col-lg-2 col-sm-4  offset-lg-1  offset-sm-2  col-5 offset-1 dounot">
+                       <div>
+                           <div class="image">
+                               <img src="{% static 'images/menu/pexels-valeria-boltneva-1028431.jpg'%}" alt="">
+                           </div>
+                           <div class="text text-center">
+                               <p><b>DOUNOT</b></p>
+                           </div>
+                       </div>
+                       
+                   </div>
+                   <div class="col-lg-2 col-sm-4 col-5  cupcake">
+                       <div>
+                           <div class="image">
+                               <img src="{% static 'images/menu/cupcake.png'%}" alt="">
+                           </div>
+                           <div class="text text-center ">
+                               <p><b>CUPCAKE</b></p>
+                           </div>  
+                       </div>
+                   </div><div class="col-lg-2 col-sm-4 offset-lg-0 offset-sm-4 col-5 offset-3 cake active-menu ">
+                       <div>
+                           <div class="image">
+                               <img src="{% static 'images/menu/pexels-archie-binamira-1027811.jpg'%}" alt="">
+                           </div>
+                           <div class="text text-center">
+                               <p><b>CAKE</b></p>
+                           </div>
+                       </div>
+                   </div><div class="col-lg-2 col-sm-4 offset-lg-0 offset-sm-2 col-5 offset-1  cookies">
+                       <div>
+                           <div class="image">
+                               <img src="{% static 'images/menu/pexels-pixabay-301972.jpg'%}" alt="">
+                           </div>
+                           <div class="text text-center">
+                               <p><b>COOKIES</b></p>
+                           </div>
+                       </div>
+                   </div><div class="col-lg-2 col-5  col-sm-4 desert">
+                       <div>
+                           <div class="image">
+                               <img src="{%  static 'images/menu/pexels-jonathan-cooper-10175400.jpg'%}" alt="">
+                           </div>
+                           <div class="text text-center">
+                               <p><b>DESERT</b></p>
+                           </div>
+                       </div>
+                   </div>
+
+                   <!-- Iteam List Ends -->
+               </div>
+           </div>
+       </div>
+   </div>
+   <!-- Fisrt Container Ends -->
+
+  
+   <!-- Third Container -->
+       <div class="container-fluid third-container">
+           <!-- Single Iteam(Cake) -->
+           <div class="row mb-5 cake-video">
+               <div class="col-lg-10 offset-lg-1">
+                   <video src="{% static 'images/menu/video.mp4'%}" loop autoplay  style="width: 100%; max-height: 50vh; object-fit: cover;"></video>
+               </div>
+           </div>
+           <div class="row cake-item">
+
+            {% for cakes in cake%}
+               <div class="col-lg-5 offset-lg-1  col-sm-12 col-10 offset-1  item" >
+                   <div class="row">
+                       <div class="col-sm-4 item-image">
+                        <a href="">
+
+                           <img src="/{{cakes.product_image}}" alt="">
+                        </a>
+                       </div>
+                       <div class="col-sm-8  iteam-info">
+                        <a href="" style="text-decoration: none; color: black;">
+
+                           <section class="d-flex justify-content-between">
+                               <p><b>{{cakes.product_name}}</b></p>
+                               <p><b>Rs {{cakes.product_price}}</b></p>
+                           </section>
+                        </a>
+                           <p>{{cakes.product_details}}</p>                                
+                       </div>
+                       
+                   </div>
+                   
+               </div>
+               {%endfor%}
+
+               
+
+               
+       </div>
+           
+
+           
+                <!-- Single Iteam(CupCake) -->
+                <div class="row mb-5 cupcake-video">
+                    <div class="col-10 offset-1">
+                        <video src="{% static 'images/menu/Cupcakes - 73050.mp4'%}" loop autoplay style="width: 100%; max-height: 50vh; object-fit: cover;"></video>
+                    </div>
+                </div>
+                <div class="row cupcake-item">
+                    {% for cupcakes in cupcake%}
+                    
+                        <div class="col-lg-5 offset-lg-1  col-sm-12 col-10 offset-1  item" >
+                            <div class="row">
+                                <div class="col-sm-4 item-image">
+                                    <a href="">
+                                        <img src="/{{cupcakes.product_image}}" alt="">
+
+                                    </a>
+                                </div>
+                                <div class="col-sm-8  iteam-info">
+                                    <a href="" style="text-decoration: none; color: black;">
+                                        <section class="d-flex justify-content-between">
+                                            <p><b>{{cupcakes.product_name}}</b></p>
+                                            <p><b>Rs {{cupcakes.product_price}}</b></p>
+                                        </section>
+                                    </a>
+                                    
+                                    <p>{{cupcakes.product_details}}</p>                                
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+
+                   
+                    
+                    {%endfor%}
+
+                     
+            </div>
+                
+
+                <!-- CupCake iteam Ennds -->
+
+            <!-- Single Iteam(Dounot) -->
+            <div class="row mb-5 dounot-video">
+               <div class="col-10 offset-1">
+                   <video src="{% static 'images/menu/Birthday-83775.mp4'%}" loop autoplay style="width: 100%; max-height: 50vh; object-fit: cover;"></video>
+               </div>
+           </div>
+           <div class="row dounot-item">
+               <div class="col-lg-5 offset-lg-1  col-sm-12 col-10 offset-1  item">
+                   <div class="row">
+                    {% for dounots in dounot%}
+                    <div class="col-lg-5 offset-lg-1  col-sm-12 col-10 offset-1  item" >
+                        <div class="row">
+                            <div class="col-sm-4 item-image">
+                                <a href="">
+
+                                <img src="/{{dounots.product_image}}" alt="">
+                                </a>
+                            </div>
+                            <div class="col-sm-8  iteam-info">
+                                <a href="" style="text-decoration: none; color: black;">
+
+                                <section class="d-flex justify-content-between">
+                                    <p><b>{{dounots.product_name}}</b></p>
+                                    <p><b>Rs {{dounots.product_price}}</b></p>
+                                </section>
+                                </a>
+                                <p>{{dounots.product_details}}</p>                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    {%endfor%}
+                   </div>
+               </div>
+
+                
+       </div>
+          
+
+           <!-- Dounot iteam Ennds -->
+
+
+            <!-- Single Iteam(Cookies) -->
+            <div class="row mb-5 cookies-video">
+               <div class="col-10 offset-1">
+                   <video src="{% static 'images/menu/Cookies - 66.mp4'%}" loop autoplay style="width: 100%; max-height: 50vh; object-fit: cover;"></video>
+               </div>
+           </div>
+           <div class="row cookies-item">
+               <div class="col-lg-5 offset-lg-1  col-sm-12 col-10 offset-1  item">
+                   <div class="row">
+                    {% for cookie in cookies%}
+                    <div class="col-lg-5 offset-lg-1  col-sm-12 col-10 offset-1  item" >
+                        <div class="row">
+                            <div class="col-sm-4 item-image">
+                                <a href="">
+
+                                <img src="/{{cookie.product_image}}" alt="">
+                                </a>
+                            </div>
+                            <div class="col-sm-8  iteam-info">
+                                <a href="" style="text-decoration: none; color: black;">
+
+                                <section class="d-flex justify-content-between">
+                                    <p><b>{{cookie.product_name}}</b></p>
+                                    <p><b>Rs {{cookie.product_price}}</b></p>
+                                </section>
+                                </a>
+                                <p>{{cookie.product_details}}</p>                                
+                            </div>
+                           
+                        </div>
+                        
+                    </div>
+                    {%endfor%}
+                   </div>
+               </div>
+
+               
+       </div>
+          
+           
+
+           <!-- Cookies iteam Ennds -->
+
+            <!-- Single Iteam(Desert) -->
+            <div class="row mb-5 desert-video">
+               <div class="col-10 offset-1">
+                   <video src="{% static 'images/menu/Cupcakes - 73050.mp4'%}" loop autoplay style="width: 100%; max-height: 50vh; object-fit: cover;"></video>
+               </div>
+           </div>
+           <div class="row desert-item">
+               <div class="col-lg-5 offset-lg-1  col-sm-12 col-10 offset-1  item">
+                   <div class="row">
+                    {% for deserts in desert%}
+                    
+                    <div class="col-lg-5 offset-lg-1  col-sm-12 col-10 offset-1  item" >
+                        <div class="row">
+                            <div class="col-sm-4 item-image">
+                                <a href="">
+
+                                <img src="/{{deserts.product_image}}" alt="">
+                                </a>
+                            </div>
+                            <div class="col-sm-8  iteam-info">
+                                <a href="" style="text-decoration: none; color: black;">
+
+                                <section class="d-flex justify-content-between">
+                                    <p><b>{{deserts.product_name}}</b></p>
+                                    <p><b>Rs {{deserts.product_price}}</b></p>
+                                </section>
+                                </a>
+                                <p>{{deserts.product_details}}</p>                                
+                            </div>
+                           
+                        </div>
+                        
+                    </div>
+                    {%endfor%}
+               </div>
+
+                
+       </div>
+          
+           
+           <!-- Desert iteam Ennds -->
+
+       </div>
+   <!-- Third Container Ends -->
+</main>
+
+
+    
+{%endblock%}
+
+{% block js%}
+    <script src="{% static 'js/common/menu.js' %}"></script>
+    
+   
+{%endblock%}
+

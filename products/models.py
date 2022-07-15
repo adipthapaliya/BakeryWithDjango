@@ -10,6 +10,7 @@ class ProductModel (models.Model):
     product_image = models.FileField(upload_to="static/image/product",blank=False)
     product_category = models.CharField(max_length=20)
     product_description = models.TextField(max_length=225,default="No Description Avilable")
+    special  = models.TextField(max_length=10,default=None)
 
     class Meta:
         db_table= 'product'

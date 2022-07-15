@@ -8,6 +8,14 @@
 
 {%endblock%}
 
+{%block head%}
+<div class="container-fluid top-navigation text-center">
+    <p>Bakery Shop, Balaju Kathmandu | Daily 9AM-9PM</p>
+
+</div>
+
+{%endblock%}
+
 
 {% block content %}
 
@@ -20,6 +28,9 @@
         width: 100%;
     }
 </style>
+
+
+
 
 <main>
 
@@ -90,13 +101,14 @@
                             <label for="product-price" class="form-label"
                                 >Category</label
                             >
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected disabled>Choose One</option>
-                                <option name="product_category" value="cake">Cake</option>
-                                <option name="product_category" value="dounot">Dounot</option>
-                                <option name="product_category" value="cupcake">Cupcake</option>
-                                <option name="product_category" value="desert">Desert</option>
-                                <option name="product_category"value="cookies">Cookies</option>
+                            <select name="product_category"  class="form-select" aria-label="Default select example" >
+                                <option   selected disabled>Choose One</option>
+                                <option value="cake">Cake</option>
+                                <option  value="dounot">Dounot</option>
+                                <option  value="cupcake">Cupcake</option>
+                                <option  value="desert">Desert</option>
+
+                                <option value="cookies">Cookies</option>
 
                               </select>
                         </div>
@@ -212,51 +224,25 @@
        </div>
        <div class="col-12">
            <div class="row">
+
+                {% for specials in special %}
                <div class="col-md-4 col-sm-8 offset-md-0 offset-sm-2 col-10 offset-1 special-item">
                    <div>
                        <div class="special-image">
-                           <img src="../static/images/background/cupcake.png" alt="">
+                           <img src="/{{specials.product_image}}" alt="">
                        </div>
                        <div class="special-text">
                            <section class="d-flex justify-content-between">
-                               <p><b>Name of Cake</b></p>
-                               <p><b>Rs 1520</b></p>
+                               <p><b>{{specials.product_name}}</b></p>
+                               <p><b>Rs {{specials.product_price}}</b></p>
                            </section>
-                           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, adipisci at? Soluta facere ipsa nam?</p>                                
+                           <p>{{specials.product_details}}</p>                                
 
                        </div>
                    </div>
                </div>
-               <div class="col-md-4 col-sm-8 offset-md-0 offset-sm-2 col-10 offset-1 special-item">
-                   <div>
-                       <div class="special-image">
-                           <img src="../static/images/background/cupcake.png" alt="">
-                       </div>
-                       <div class="special-text">
-                           <section class="d-flex justify-content-between">
-                               <p><b>Name of Cake</b></p>
-                               <p><b>Rs 1520</b></p>
-                           </section>
-                           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, adipisci at? Soluta facere ipsa nam?</p>                                
-
-                       </div>
-                   </div>
-               </div>
-               <div class="col-md-4 col-sm-8 offset-md-0 offset-sm-2 col-10 offset-1 special-item">
-                   <div>
-                       <div class="special-image">
-                           <img src="../static/images/background/cupcake.png" alt="">
-                       </div>
-                       <div class="special-text">
-                           <section class="d-flex justify-content-between">
-                               <p><b>Name of Cake</b></p>
-                               <p><b>Rs 1520</b></p>
-                           </section>
-                           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, adipisci at? Soluta facere ipsa nam?</p>                                
-
-                       </div>
-                   </div>
-               </div>
+               {% endfor %}
+               
            </div>
        </div>
    </div>
@@ -340,27 +326,30 @@
                </div>
            </div>
            <div class="row cake-item">
+
+            {% for cakes in cake%}
                <div class="col-lg-5 offset-lg-1  col-sm-12 col-10 offset-1  item" >
                    <div class="row">
                        <div class="col-sm-4 item-image">
-                           <img src="../static/images/cake/pexels-archie-binamira-1027811.jpg" alt="">
+                           <img src="/{{cakes.product_image}}" alt="">
                        </div>
                        <div class="col-sm-8  iteam-info">
                            <section class="d-flex justify-content-between">
-                               <p><b>Name of Cake</b></p>
-                               <p><b>Rs 1520</b></p>
+                               <p><b>{{cakes.product_name}}</b></p>
+                               <p><b>Rs {{cakes.product_price}}</b></p>
                            </section>
-                           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, adipisci at? Soluta facere ipsa nam?</p>                                
+                           <p>{{cakes.product_details}}</p>                                
                        </div>
                        <div class="col-12 d-flex justify-content-evenly mt-3">
-                        <a href=""><button type="button" class="btn btn-outline-success">Add to Special</button></a>
-                        <a href=""><button type="button" class="btn btn-outline-primary">Edit</button></a>
-                        <a href=""><button type="button" class="btn btn-outline-danger">Delete</button></a>
+                        <a href="/product/admin/special/{{cakes.id}}"><button type="button" class="btn btn-outline-success">Add to Special</button></a>
+                        <a href="/product/admin/edit/{{cakes.id}}"><button type="button" class="btn btn-outline-primary">Edit</button></a>
+                        <a href="/product/admin/delete/{{cakes.id}}"><button type="button" class="btn btn-outline-danger">Delete</button></a>
 
                        </div>
                    </div>
                    
                </div>
+               {%endfor%}
 
                
 
@@ -376,20 +365,29 @@
                     </div>
                 </div>
                 <div class="row cupcake-item">
-                    <div class="col-lg-5 offset-lg-1  col-sm-12 col-10 offset-1  item">
+                    {% for cupcakes in cupcake%}
+                    <div class="col-lg-5 offset-lg-1  col-sm-12 col-10 offset-1  item" >
                         <div class="row">
                             <div class="col-sm-4 item-image">
-                                <img src="../static/images/background/cupcake.png" alt="">
+                                <img src="/{{cupcakes.product_image}}" alt="">
                             </div>
                             <div class="col-sm-8  iteam-info">
                                 <section class="d-flex justify-content-between">
-                                    <p><b>Name of Cake</b></p>
-                                    <p><b>Rs 1520</b></p>
+                                    <p><b>{{cupcakes.product_name}}</b></p>
+                                    <p><b>Rs {{cupcakes.product_price}}</b></p>
                                 </section>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, adipisci at? Soluta facere ipsa nam?</p>                                
+                                <p>{{cupcakes.product_details}}</p>                                
+                            </div>
+                            <div class="col-12 d-flex justify-content-evenly mt-3">
+                             <a href="/product/admin/special/{{cupcakes.id}}"><button type="button" class="btn btn-outline-success">Add to Special</button></a>
+                             <a href="/product/admin/edit/{{cupcakes.id}}"><button type="button" class="btn btn-outline-primary">Edit</button></a>
+                             <a href="/product/admin/delete/{{cupcakes.id}}"><button type="button" class="btn btn-outline-danger">Delete</button></a>
+     
                             </div>
                         </div>
+                        
                     </div>
+                    {%endfor%}
 
                      
             </div>
@@ -406,22 +404,29 @@
            <div class="row dounot-item">
                <div class="col-lg-5 offset-lg-1  col-sm-12 col-10 offset-1  item">
                    <div class="row">
-                       <div class="col-sm-4 item-image">
-                           <img src="../static/images/dounot/pexels-valeria-boltneva-1028431.jpg" alt="">
-                       </div>
-                       <div class="col-sm-8  iteam-info">
-                           <section class="d-flex justify-content-between">
-                               <p><b>Name of Cake</b></p>
-                               <p><b>Rs 1520</b></p>
-                           </section>
-                           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, adipisci at? Soluta facere ipsa nam?</p>                                
-                       </div>
-                       <div class="col-12 d-flex justify-content-evenly mt-3">
-                        <a href=""><button type="button" class="btn btn-outline-success">Add to Special</button></a>
-                        <a href=""><button type="button" class="btn btn-outline-primary">Edit</button></a>
-                        <a href=""><button type="button" class="btn btn-outline-danger">Delete</button></a>
-
-                       </div>
+                    {% for dounots in dounot%}
+                    <div class="col-lg-5 offset-lg-1  col-sm-12 col-10 offset-1  item" >
+                        <div class="row">
+                            <div class="col-sm-4 item-image">
+                                <img src="/{{dounots.product_image}}" alt="">
+                            </div>
+                            <div class="col-sm-8  iteam-info">
+                                <section class="d-flex justify-content-between">
+                                    <p><b>{{dounots.product_name}}</b></p>
+                                    <p><b>Rs {{dounots.product_price}}</b></p>
+                                </section>
+                                <p>{{dounots.product_details}}</p>                                
+                            </div>
+                            <div class="col-12 d-flex justify-content-evenly mt-3">
+                             <a href="/product/admin/special/{{dounot.id}}"><button type="button" class="btn btn-outline-success">Add to Special</button></a>
+                             <a href="/product/admin/edit/{{dounot.id}}"><button type="button" class="btn btn-outline-primary">Edit</button></a>
+                             <a href="/product/admin/delete/{{dounot.id}}"><button type="button" class="btn btn-outline-danger">Delete</button></a>
+     
+                            </div>
+                        </div>
+                        
+                    </div>
+                    {%endfor%}
                    </div>
                </div>
 
@@ -441,22 +446,29 @@
            <div class="row cookies-item">
                <div class="col-lg-5 offset-lg-1  col-sm-12 col-10 offset-1  item">
                    <div class="row">
-                       <div class="col-sm-4 item-image">
-                           <img src="../static/images/cookies/pexels-pixabay-301972.jpg" alt="">
-                       </div>
-                       <div class="col-sm-8  iteam-info">
-                           <section class="d-flex justify-content-between">
-                               <p><b>Name of Cake</b></p>
-                               <p><b>Rs 1520</b></p>
-                           </section>
-                           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, adipisci at? Soluta facere ipsa nam?</p>                                
-                       </div>
-                       <div class="col-12 d-flex justify-content-evenly mt-3">
-                        <a href=""><button type="button" class="btn btn-outline-success">Add to Special</button></a>
-                        <a href=""><button type="button" class="btn btn-outline-primary">Edit</button></a>
-                        <a href=""><button type="button" class="btn btn-outline-danger">Delete</button></a>
-
-                       </div>
+                    {% for cookie in cookies%}
+                    <div class="col-lg-5 offset-lg-1  col-sm-12 col-10 offset-1  item" >
+                        <div class="row">
+                            <div class="col-sm-4 item-image">
+                                <img src="/{{cookie.product_image}}" alt="">
+                            </div>
+                            <div class="col-sm-8  iteam-info">
+                                <section class="d-flex justify-content-between">
+                                    <p><b>{{cookie.product_name}}</b></p>
+                                    <p><b>Rs {{cookie.product_price}}</b></p>
+                                </section>
+                                <p>{{cookie.product_details}}</p>                                
+                            </div>
+                            <div class="col-12 d-flex justify-content-evenly mt-3">
+                             <a href="/product/admin/special/{{cookie.id}}"><button type="button" class="btn btn-outline-success">Add to Special</button></a>
+                             <a href="/product/admin/edit/{{cookie.id}}"><button type="button" class="btn btn-outline-primary">Edit</button></a>
+                             <a href="/product/admin/delete/{{cookie.id}}"><button type="button" class="btn btn-outline-danger">Delete</button></a>
+     
+                            </div>
+                        </div>
+                        
+                    </div>
+                    {%endfor%}
                    </div>
                </div>
 
@@ -476,23 +488,29 @@
            <div class="row desert-item">
                <div class="col-lg-5 offset-lg-1  col-sm-12 col-10 offset-1  item">
                    <div class="row">
-                       <div class="col-sm-4 item-image">
-                           <img src="../static/images/icecream/pexels-jonathan-cooper-10175400.jpg" alt="">
-                       </div>
-                       <div class="col-sm-8  iteam-info">
-                           <section class="d-flex justify-content-between">
-                               <p><b>Name of Cake</b></p>
-                               <p><b>Rs 1520</b></p>
-                           </section>
-                           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, adipisci at? Soluta facere ipsa nam?</p>                                
-                       </div>
-                   </div>
-                   <div class="col-12 d-flex justify-content-evenly mt-3">
-                    <a href=""><button type="button" class="btn btn-outline-success">Add to Special</button></a>
-                    <a href=""><button type="button" class="btn btn-outline-primary">Edit</button></a>
-                    <a href=""><button type="button" class="btn btn-outline-danger">Delete</button></a>
-
-                   </div>
+                    {% for deserts in desert%}
+                    <div class="col-lg-5 offset-lg-1  col-sm-12 col-10 offset-1  item" >
+                        <div class="row">
+                            <div class="col-sm-4 item-image">
+                                <img src="/{{deserts.product_image}}" alt="">
+                            </div>
+                            <div class="col-sm-8  iteam-info">
+                                <section class="d-flex justify-content-between">
+                                    <p><b>{{deserts.product_name}}</b></p>
+                                    <p><b>Rs {{deserts.product_price}}</b></p>
+                                </section>
+                                <p>{{deserts.product_details}}</p>                                
+                            </div>
+                            <div class="col-12 d-flex justify-content-evenly mt-3">
+                             <a href="/product/admin/special/{{deserts.id}}"><button type="button" class="btn btn-outline-success">Add to Special</button></a>
+                             <a href="/product/admin/edit/{{deserts.id}}"><button type="button" class="btn btn-outline-primary">Edit</button></a>
+                             <a href="/product/admin/delete/{{deserts.id}}"><button type="button" class="btn btn-outline-danger">Delete</button></a>
+     
+                            </div>
+                        </div>
+                        
+                    </div>
+                    {%endfor%}
                </div>
 
                 
