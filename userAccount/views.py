@@ -99,3 +99,8 @@ def menu_page(request):
 
     special = ProductModel.objects.all().filter(special=1) 
     return render(request,'user/menu.html',{'special':special,'cake':cake,'cookies':cookies,'cupcake':cupcake,'desert':desert,'dounot':dounot})
+
+def details(request,id):
+    data = ProductModel.objects.get(id=id)
+
+    return render(request,'user/details.html',{'data':data})

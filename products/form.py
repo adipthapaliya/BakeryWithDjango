@@ -5,7 +5,8 @@ from products.models import ProductModel,MessageModel
 class ProductForm(forms.ModelForm):
     class Meta:
         model=ProductModel
-        fields ="__all__"
+        fields =     ['product_name','product_price','product_details','product_image','product_category','product_description']
+
 
 
 class MessageForm(forms.ModelForm):

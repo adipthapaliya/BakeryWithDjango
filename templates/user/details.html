@@ -1,0 +1,60 @@
+{% extends 'base.html'%}
+
+{% block title %}  Details {% endblock %} 
+
+{% load static %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'css/user/details.css'%}"> {% endblock %}
+
+{% block content %}
+
+ <!-- Main  -->
+ <main>
+    <div class="first-container"></div>
+      <div class="details container">
+          <div class="row">
+              <div class="col-12 mb-4">
+                  <h2>PRODUCT DETAILS</h2>
+                  <hr>
+              </div>
+              <div class="col-lg-6 mb-5 product-image">
+                  <img src="/{{data.product_image}}" alt="">
+              </div>
+              <div class="col-lg-6 product-details">
+                  <h3>{{data.product_name}}</h3>
+                  <p>{{data.product_details}}</p>
+                  <hr>
+                  <h5><b>Price:</b> &nbsp; &nbsp; <span>RS {{data.product_price}}</span></h5>
+                
+                      {% if request.user.is_authenticated %}
+                    
+                      
+                      <div class="mt-5 mb-5">
+                          <a href="/product/buynow/{{data.id}}/{{user.id}}"><button type="button" class="btn btn-primary " >Buy Now</button></a>
+
+                      </div>
+
+                      {% else %}
+
+                     
+                    <div class="mt-5 mb-5">
+                        <a href="/login"><button type="button" class="btn btn-primary " >Buy Now</button></a>
+
+                    </div>
+
+                    {% endif %}
+
+                    <hr>
+
+                  <h4>Description</h4>
+                  <p>{{data.product_description}}</p>
+                  
+                      
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+   
+  </main>
+{% endblock %}

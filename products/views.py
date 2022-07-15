@@ -13,7 +13,7 @@ def add_product(request):
 
         data = ProductForm(request.POST, request.FILES)
         data.save()
-        return('/admin/menu')
+        return redirect('/admin/menu')
 
     else:
         messages.error(request,"Uable to add Product , Please Try Again")
