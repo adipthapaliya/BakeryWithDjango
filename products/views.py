@@ -65,6 +65,12 @@ def special(request,id):
     data.save()
     return redirect('/admin/menu') 
 
+def remove_special(request,id):
+    data = ProductModel.objects.get(id=id)
+    data.special = None
+    data.save()
+    return redirect('/admin/menu') 
+
 def buy_product(request,id,uid):
     data =  BuyModel(product_id=id, user_id=uid )
     data.save()
