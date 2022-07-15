@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate,login as log
 from django.contrib.auth import logout
 from django.contrib import messages
 
-from products.models import MessageModel, ProductModel
+from products.models import BuyModel, MessageModel, ProductModel
 
 # Create your views here.
 @login_required(login_url='/admin/login')
@@ -68,3 +68,12 @@ def login_admin(request):
 def log_out(request):
     logout(request)
     return redirect('/admin/login')
+
+@login_required(login_url='/admin/login')
+
+def order(request):
+    
+    order = BuyModel.objects.select_related('product','user')
+  
+
+    return render(request,'admin/order.html',{'order':order})

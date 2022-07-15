@@ -1,0 +1,75 @@
+{% extends 'adminbase.html'%}
+
+{% block message %} active  {% endblock %}
+
+
+{% block title %} Admin || Message   {% endblock %}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{%static 'css/admin/message.css'%}">
+
+    <style>
+        .main-container{
+            min-height: 50vh;
+            margin: 10vh auto;
+        }
+    </style>
+{% endblock %}
+
+
+{% block content %}
+
+<main >
+
+    <div class="container text-white main-container">
+        
+        <table class="table table-hover ">
+            <thead>
+              <tr>
+                <th scope="col"> SN </th>
+                <th scope="col">Prodcut Image</th>
+                <th scope="col">Prodcut Name</th>
+                <th scope="col">Customer Info</th>
+                <th scope="col">Options</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for orders in order %}
+
+               
+
+              <tr>
+                <th scope="row">1</th>
+                <td ><img src="/{{orders.product.product_image}}" alt="" srcset="" width="300" height="200"></td>
+                <td>{{orders.product.product_name}}</td>
+                <td>
+                  <ul>
+                    <li style="list-style: none;">Name: {{orders.user.first_name}}</li>
+                    <li style="list-style: none;">Phone: {{orders.user.email}}</li>
+
+                  </ul>
+                </td>
+                <td>
+                    
+                    <a href="/product/buy_delete/{{orders.product.id}}/{{orders.user.id}}"><button type="button" class="btn btn-danger">Delivered</button></a>
+
+                </td>
+              </tr>
+             
+
+            
+
+              {% endfor %}
+              
+            </tbody>
+          </table>
+
+
+
+    </div>
+
+</main>
+    
+{% endblock %}

@@ -72,3 +72,11 @@ def buy_product(request,id,uid):
     return redirect('/menu')
 
 
+def delete_buy(request,id,uid):
+        data = BuyModel.objects.get(product=id,user=uid)
+        data.delete()
+
+        order = BuyModel.objects.select_related('product','user')
+        
+        return render(request,'admin/order.html',{'order':order})
+

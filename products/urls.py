@@ -24,6 +24,8 @@ urlpatterns = [
     path('admin/delete/<int:id>',views.delete),
     path('admin/special/<int:id>',views.special),
     path('buynow/<int:id>/<int:uid>',views.buy_product),
+        path('buy_delete/<int:id>/<int:uid>',views.delete_buy),
+
 
 
     

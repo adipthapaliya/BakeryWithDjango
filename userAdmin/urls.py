@@ -21,6 +21,8 @@ urlpatterns = [
     path('index',views.home_page),
     path('home',views.home_page),
     path('menu',views.menu_page),
+    path('order',views.order),
+
 
     path('message',views.message_page),
 
