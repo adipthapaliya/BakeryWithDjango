@@ -3,7 +3,7 @@ from django.shortcuts import redirect, render
 from products.form import MessageForm, ProductForm
 from django.contrib import messages
 
-from products.models import ProductModel
+from products.models import BuyModel, ProductModel
 
 # Create your views here.
 
@@ -64,5 +64,11 @@ def special(request,id):
     data.special = 1
     data.save()
     return redirect('/admin/menu') 
+
+def buy_product(request,id,uid):
+    data =  BuyModel(product_id=id, user_id=uid )
+    data.save()
+
+    return redirect('/menu')
 
 

@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -28,3 +29,10 @@ class MessageModel (models.Model):
 
     class Meta:
         db_table= 'message'
+
+
+class BuyModel (models.Model):
+    id = models.AutoField(auto_created=True,primary_key=True)
+    product= models.ForeignKey(ProductModel, on_delete=models.CASCADE)
+    user= models.ForeignKey(User, on_delete=models.CASCADE)
+
