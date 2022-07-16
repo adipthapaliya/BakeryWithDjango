@@ -18,6 +18,8 @@ from django.urls import path
 from products import views
 urlpatterns = [
     path('admin/addproduct',views.add_product),
+        path('admin/updateproduct/<int:id>',views.update_product),
+
     path('admin/delete/<int:id>',views.delete_product),
     path('user/sendmessage',views.add_message),
     path('admin/edit/<int:id>',views.edit),

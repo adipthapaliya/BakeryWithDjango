@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render
 
-from products.form import MessageForm, ProductForm
+from products.form import MessageForm, ProductForm, UpdateForm
 from django.contrib import messages
 
 from products.models import BuyModel, ProductModel
@@ -18,6 +18,20 @@ def add_product(request):
     else:
         messages.error(request,"Uable to add Product , Please Try Again")
         return redirect('/admin/menu') 
+
+
+def update_product(request,id):
+
+    if request.method == 'POST' :
+        value = ProductModel.objects.get(id=id)
+        data = UpdateForm(request.POST, request.FILES,instance=value)
+        data.save()
+        return redirect('/admin/menu')
+
+    else:
+        messages.error(request,"Uable to add Product , Please Try Again")
+        return redirect('/admin/menu') 
+
 
 def delete_product(request,id):
     data = ProductModel.objects.get(id=id)
