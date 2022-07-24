@@ -16,7 +16,7 @@ def home_page(request):
 
 @login_required(login_url='/admin/login')
 
-def menu_page(request):
+def menu_page(request): 
     cake = ProductModel.objects.all().filter(product_category='cake')
     cookies = ProductModel.objects.all().filter(product_category="cookies")
     cupcake = ProductModel.objects.all().filter(product_category="cupcake")
